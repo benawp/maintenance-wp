@@ -1,0 +1,5 @@
+# Activer le mode de maintenance
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+RewriteCond %{REMOTE_ADDR} !197.149.21.3
+RewriteRule ^(.*)$ /maintenance.html [R=307,L]
